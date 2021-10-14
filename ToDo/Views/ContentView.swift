@@ -10,54 +10,41 @@ import SwiftUI
 struct ContentView: View {
     
     @State var showAddNewTheme: Bool = false
-    @State var themes = [Theme]()
+    @State var themes = data
     @State var newTheme: String = ""
     
     var body: some View {
+        
         NavigationView {
-            HStack {
-                
-                Spacer()
-                Button(action: {
-                    showAddNewTheme = true
-                }, label: {
-                    Image(systemName: "plus.app")
-                        .font(.largeTitle)
-                        .padding(.trailing, 10)
-                        .foregroundColor(.black)
-                })
-                .popover(isPresented: $showAddNewTheme, content: {
-                    AddNewTheme(themes: $themes, newTheme: $newTheme, showAddNewTheme: $showAddNewTheme)
-                })
-            }
-            
-            ForEach(themes) { theme in
-                NavigationLink(
-                    destination: ThemeView(),
-                    label: {
-                        ThemeListItem(theme: theme)
-                    })
-            }
+
+            BoxSubView(themes: $themes)
         }
-        
-        
-        
-        
-        
-        
     }
+ 
+        
+
+            
+
 }
 
-struct ThemeListItem: View {
+struct BoxListItem: View {
     
     var theme: Theme
     
     var body: some View {
-        Text(theme.name)
-            .padding()
-            .frame(minWidth: 75, minHeight: 75)
-            .background(Color.gray)
-            .cornerRadius(10.0)
+        ZStack(alignment: .bottomLeading) {
+            RoundedRectangle(cornerRadius: 10.0)
+                .fill(
+                    RadialGradient(gradient: Gradient(colors: [.black, .purple]), center: .bottomLeading, startRadius: 3, endRadius: 200)
+                )
+                .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .bottomLeading)
+            Text(theme.name)
+                .foregroundColor(.white)
+                .fontWeight(.heavy)
+                .padding()
+
+        }
+
     }
     
 }
@@ -96,5 +83,40 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         
+    }
+}
+
+struct BoxSubView: View {
+    
+    @Binding var themes: [Theme]
+    
+    var body: some View {
+        ScrollView {
+            VStack {
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+                    .font(.body)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .frame(alignment: .center)
+                LazyVGrid(columns: [
+                    .init(),
+                    .init(),
+                    .init()
+                ], content: {
+                    
+                    ForEach(themes) { theme in
+                        NavigationLink(
+                            destination: ThemeView(theme: theme),
+                            label: {
+                                BoxListItem(theme: theme)
+                                    .navigationBarTitle("Themes", displayMode: .large)
+                                
+                            })
+                        
+                    }
+                })
+            }
+        }
+        .padding()
     }
 }
