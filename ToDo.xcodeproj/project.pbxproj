@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66538DA226D1893200D48018 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66538DA126D1893200D48018 /* GoalView.swift */; };
+		6665F1BA271CE8E100F431E6 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6665F1B9271CE8E100F431E6 /* TaskView.swift */; };
 		66E36AE126CDCC29002644AE /* ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36AE026CDCC29002644AE /* ToDoApp.swift */; };
 		66E36AE326CDCC29002644AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36AE226CDCC29002644AE /* ContentView.swift */; };
 		66E36AE526CDCC2B002644AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E36AE426CDCC2B002644AE /* Assets.xcassets */; };
@@ -17,9 +17,9 @@
 		66E36B1726CDD266002644AE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1626CDD266002644AE /* Theme.swift */; };
 		66E36B1826CDD266002644AE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1626CDD266002644AE /* Theme.swift */; };
 		66E36B1926CDD266002644AE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1626CDD266002644AE /* Theme.swift */; };
-		66E36B1C26CDDC4F002644AE /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1B26CDDC4F002644AE /* ThemeView.swift */; };
-		66E36B1D26CDDC4F002644AE /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1B26CDDC4F002644AE /* ThemeView.swift */; };
-		66E36B1E26CDDC4F002644AE /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1B26CDDC4F002644AE /* ThemeView.swift */; };
+		66E36B1C26CDDC4F002644AE /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1B26CDDC4F002644AE /* GoalView.swift */; };
+		66E36B1D26CDDC4F002644AE /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1B26CDDC4F002644AE /* GoalView.swift */; };
+		66E36B1E26CDDC4F002644AE /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E36B1B26CDDC4F002644AE /* GoalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		66538DA126D1893200D48018 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		6665F1B9271CE8E100F431E6 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		66E36ADD26CDCC29002644AE /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E36AE026CDCC29002644AE /* ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoApp.swift; sourceTree = "<group>"; };
 		66E36AE226CDCC29002644AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		66E36AFD26CDCC2B002644AE /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
 		66E36AFF26CDCC2B002644AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66E36B1626CDD266002644AE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		66E36B1B26CDDC4F002644AE /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		66E36B1B26CDDC4F002644AE /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				66E36AE226CDCC29002644AE /* ContentView.swift */,
-				66E36B1B26CDDC4F002644AE /* ThemeView.swift */,
-				66538DA126D1893200D48018 /* GoalView.swift */,
+				66E36B1B26CDDC4F002644AE /* GoalView.swift */,
+				6665F1B9271CE8E100F431E6 /* TaskView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,8 +298,8 @@
 			files = (
 				66E36AE326CDCC29002644AE /* ContentView.swift in Sources */,
 				66E36B1726CDD266002644AE /* Theme.swift in Sources */,
-				66538DA226D1893200D48018 /* GoalView.swift in Sources */,
-				66E36B1C26CDDC4F002644AE /* ThemeView.swift in Sources */,
+				66E36B1C26CDDC4F002644AE /* GoalView.swift in Sources */,
+				6665F1BA271CE8E100F431E6 /* TaskView.swift in Sources */,
 				66E36AE126CDCC29002644AE /* ToDoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E36AF326CDCC2B002644AE /* ToDoTests.swift in Sources */,
-				66E36B1D26CDDC4F002644AE /* ThemeView.swift in Sources */,
+				66E36B1D26CDDC4F002644AE /* GoalView.swift in Sources */,
 				66E36B1826CDD266002644AE /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E36AFE26CDCC2B002644AE /* ToDoUITests.swift in Sources */,
-				66E36B1E26CDDC4F002644AE /* ThemeView.swift in Sources */,
+				66E36B1E26CDDC4F002644AE /* GoalView.swift in Sources */,
 				66E36B1926CDD266002644AE /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

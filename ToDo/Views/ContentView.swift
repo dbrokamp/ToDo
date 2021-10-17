@@ -68,7 +68,7 @@ struct BoxSubView: View {
                 ], content: {
                     ForEach(themes) { theme in
                         NavigationLink(
-                            destination: ThemeView(theme: theme),
+                            destination: GoalView(theme: theme),
                             label: {
                                 BoxListItem(name: theme.name)
                                     .navigationBarTitle("Themes", displayMode: .large)
