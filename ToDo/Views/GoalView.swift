@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct GoalView: View {
+    
+ 
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+            
+       
+            
+        }
+        
     }
 }
 
 struct GoalView_Previews: PreviewProvider {
+    
+    static var theme = Theme(name: "Theme", goals: [Goal(name: "Goals", tasks: [Task(description: "Task1")]), Goal(name: "Goal2", tasks: [Task(description: "Task1")])])
+    
     static var previews: some View {
         GoalView()
     }
