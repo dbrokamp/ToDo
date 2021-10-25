@@ -30,7 +30,7 @@ struct GoalView: View {
                 .init()
             ], content: {
                 
-                ForEach(theme.goals!) { goal in
+                ForEach(theme.goals) { goal in
                     NavigationLink(
                         destination: TaskView(goal: goal),
                         label: {

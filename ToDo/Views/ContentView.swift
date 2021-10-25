@@ -9,22 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var showAddNewTheme: Bool = false
-    @State var themes = data
-    @State var newTheme: String = ""
+    @ObservedObject var userData: Data
     
     var body: some View {
-        
-        NavigationView {
+        VStack {
+            HStack {
+                Spacer()
+                Text("Add new theme")
+                    .bold()
+                Button(action: {}, label: {
+                    Image(systemName: "plus.square")
+                        .font(.largeTitle)
+                        .padding()
+                })
+            }
 
-            BoxSubView(themes: $themes)
+            NavigationView {
+                BoxSubView(themes: userData.userThemes)
+                
+            }
+            
         }
     }
- 
-        
-
-            
-
 }
 
 struct BoxListItem: View {
@@ -42,16 +48,16 @@ struct BoxListItem: View {
                 .foregroundColor(.white)
                 .fontWeight(.heavy)
                 .padding()
-
+            
         }
-
+        
     }
     
 }
 
 struct BoxSubView: View {
     
-    @Binding var themes: [Theme]
+    var themes: [Theme]
     
     var body: some View {
         ScrollView {
@@ -90,7 +96,7 @@ struct BoxSubView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(userData: Data(themes: [Theme(name: "Work", goals: [Goal(name: "Work Goal1", tasks: [Task(description: "Work Task1")]), Goal(name: "Work Goal2", tasks: [Task(description: "Work Task1")])])]))
         
     }
 }

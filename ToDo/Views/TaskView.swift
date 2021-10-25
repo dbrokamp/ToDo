@@ -14,12 +14,14 @@ struct TaskView: View {
     var body: some View {
         
         VStack {
-            Text(goal.name)
-            Text("Task Lisk")
             List {
-                ForEach(goal.tasks!) { task in
-                    Text(task.description)
+
+                    ForEach(goal.tasks!) { task in
+                        Text(task.description)
+                            .navigationTitle("\(goal.name) Tasks")
                 }
+
+                
             }
         }
     }
