@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var userData: Data
+    @State private var isAddNewThemeActive: Bool = false
     
     var body: some View {
         VStack {
@@ -17,21 +18,31 @@ struct ContentView: View {
                 Spacer()
                 Text("Add new theme")
                     .bold()
-                Button(action: {}, label: {
+                Button(action: {
+                    isAddNewThemeActive.toggle()
+                }, label: {
                     Image(systemName: "plus.square")
                         .font(.largeTitle)
                         .padding()
                 })
+                    .sheet(isPresented: $isAddNewThemeActive, onDismiss: { didDimiss() }, content: { AddNewThemeModal(isAddNewThemeActive: $isAddNewThemeActive) })
             }
-
+            
             NavigationView {
                 BoxSubView(themes: userData.userThemes)
                 
             }
             
         }
+        
+    }
+    
+    
+    func didDimiss() {
+        print("Dismissed the add new theme modal")
     }
 }
+
 
 struct BoxListItem: View {
     
@@ -87,6 +98,8 @@ struct BoxSubView: View {
         }
         .padding()
     }
+
+        
 }
 
 
