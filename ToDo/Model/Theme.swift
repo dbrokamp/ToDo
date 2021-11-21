@@ -16,8 +16,14 @@ let data = [Theme(name: "Work", goals: [Goal(name: "Work Goal1", tasks: [Task(de
 class Data: ObservableObject {
     @Published var userThemes: [Theme]
     
+
+    
     init(themes: [Theme]) {
         userThemes.self = themes
+    }
+    
+    public func addNewTheme(_ newTheme: String) {
+        userThemes.append(Theme(name: newTheme, goals: []))
     }
 }
 
@@ -25,13 +31,8 @@ class Data: ObservableObject {
 struct Theme: Identifiable {
     let id = UUID()
     
-    var name: String
-    var goals: [Goal]
-
-    init(name: String, goals: [Goal]) {
-        self.name = name
-        self.goals = goals
-    }
+    var name: String = ""
+    var goals: [Goal] = []
 }
 
 struct Goal: Identifiable {

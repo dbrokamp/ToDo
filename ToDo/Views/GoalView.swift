@@ -72,7 +72,7 @@ struct GoalListItem: View {
     
 }
 
-struct ThemeView_Previews: PreviewProvider {
+struct GoalView_Previews: PreviewProvider {
     
 
     
